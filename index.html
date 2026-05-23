@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Anchor Lab builds voice AI gateways, command runtimes, and system adapters for existing software, hardware, and enterprise workflows."
+    />
+    <title>Anchor Lab</title>
+    <link rel="icon" href="data:," />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f8f8f6;
+        --fg: #0b0b0b;
+        --muted: #686868;
+        --muted-strong: #3a3a3a;
+        --line: #deded9;
+        --line-strong: #bdbdb7;
+        --surface: rgba(255, 255, 255, 0.72);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: var(--bg);
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.94), rgba(248, 248, 246, 0) 34rem),
+          var(--bg);
+        color: var(--fg);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        letter-spacing: 0;
+        text-rendering: geometricPrecision;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(100%, 1120px);
+        min-height: 100vh;
+        margin: 0 auto;
+        padding: 30px 28px 42px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .brand-mark {
+        color: var(--fg);
+        font-weight: 700;
+      }
+
+      .nav a {
+        transition:
+          opacity 160ms ease,
+          color 160ms ease;
+      }
+
+      .nav a:hover {
+        color: var(--fg);
+        opacity: 0.78;
+      }
+
+      main {
+        flex: 1;
+        width: 100%;
+        display: grid;
+        align-content: center;
+        gap: 92px;
+        padding: 112px 0 84px;
+      }
+
+      .hero {
+        width: min(100%, 900px);
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(68px, 13vw, 156px);
+        line-height: 0.88;
+        font-weight: 820;
+      }
+
+      .tagline {
+        max-width: 760px;
+        margin: 34px auto 0;
+        color: #171717;
+        font-size: clamp(25px, 4.3vw, 52px);
+        line-height: 1.02;
+        font-weight: 650;
+      }
+
+      .description {
+        max-width: 690px;
+        margin: 28px auto 0;
+        color: var(--muted);
+        font-size: clamp(17px, 2vw, 21px);
+        line-height: 1.68;
+      }
+
+      .content {
+        width: min(100%, 760px);
+        margin: 0 auto;
+        display: grid;
+        gap: 64px;
+      }
+
+      .section-title {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 720;
+        letter-spacing: 0.12em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .project-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .project-card {
+        display: block;
+        padding: 28px 30px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        transition:
+          border-color 160ms ease,
+          opacity 160ms ease,
+          transform 160ms ease;
+      }
+
+      .project-card:hover {
+        border-color: var(--line-strong);
+        opacity: 0.92;
+        transform: translateY(-2px);
+      }
+
+      .project-name {
+        margin: 0;
+        font-size: clamp(22px, 3vw, 30px);
+        line-height: 1.15;
+        font-weight: 760;
+      }
+
+      .project-desc {
+        margin: 12px 0 0;
+        color: var(--muted-strong);
+        font-size: clamp(16px, 1.8vw, 18px);
+        line-height: 1.55;
+      }
+
+      .contact {
+        text-align: center;
+      }
+
+      .contact-link {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        color: var(--muted-strong);
+        font-size: clamp(17px, 2vw, 20px);
+        line-height: 1.4;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        text-underline-offset: 7px;
+        transition:
+          color 160ms ease,
+          opacity 160ms ease,
+          text-decoration-color 160ms ease,
+          transform 160ms ease;
+      }
+
+      .contact-link:hover {
+        color: var(--fg);
+        opacity: 0.86;
+        text-decoration-color: currentColor;
+        transform: translateY(-1px);
+      }
+
+      footer {
+        color: #777777;
+        font-size: 13px;
+        text-align: center;
+      }
+
+      @media (max-width: 720px) {
+        .page {
+          padding: 22px 20px 34px;
+        }
+
+        .nav {
+          font-size: 13px;
+        }
+
+        main {
+          gap: 64px;
+          padding: 82px 0 64px;
+          align-content: start;
+        }
+
+        h1 {
+          font-size: clamp(62px, 18vw, 84px);
+        }
+
+        .tagline {
+          margin-top: 28px;
+        }
+
+        .content {
+          gap: 52px;
+        }
+
+        .project-card {
+          padding: 24px 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="nav" aria-label="Site header">
+        <a class="brand-mark" href="/">Anchor Lab</a>
+        <a href="mailto:founder@gxanchor.com">Contact</a>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="page-title">
+          <h1 id="page-title">Anchor Lab</h1>
+          <p class="tagline">AI-native command runtime and system adapters.</p>
+          <p class="description">
+            We build voice AI gateways, command runtimes, and system adapters for existing
+            software, hardware, and enterprise workflows.
+          </p>
+        </section>
+
+        <section class="content" aria-label="Company details">
+          <div class="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-list">
+              <article class="project-card">
+                <h3 class="project-name">GPTS</h3>
+                <p class="project-desc">Voice AI gateway and command runtime</p>
+              </article>
+              <article class="project-card">
+                <h3 class="project-name">ApiMind</h3>
+                <p class="project-desc">AI-native API contract and adapter platform</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="contact">
+            <h2 class="section-title">Contact</h2>
+            <a class="contact-link" href="mailto:founder@gxanchor.com">founder@gxanchor.com</a>
+          </div>
+        </section>
+      </main>
+
+      <footer>GX Anchor Lab</footer>
+    </div>
+  </body>
+</html>
